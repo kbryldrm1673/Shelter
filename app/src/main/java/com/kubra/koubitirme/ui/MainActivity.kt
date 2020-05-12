@@ -1,4 +1,4 @@
-package com.kubra.koubitirme
+package com.kubra.koubitirme.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.kubra.koubitirme.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         btn2 = findViewById(R.id.register_button)
 
         btn2?.setOnClickListener {
-            val intent = Intent(this@MainActivity,RegisterActivity::class.java)
+            val intent = Intent(this@MainActivity,
+                RegisterActivity::class.java)
             startActivity(intent)
         }
 

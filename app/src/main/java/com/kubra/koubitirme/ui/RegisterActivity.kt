@@ -1,8 +1,9 @@
-package com.kubra.koubitirme
+package com.kubra.koubitirme.ui
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.kubra.koubitirme.R
 
 class RegisterActivity : AppCompatActivity() {
 

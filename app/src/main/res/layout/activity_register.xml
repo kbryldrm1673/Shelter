@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.RegisterActivity"
     android:background="@color/colorPrimary">
 
     <RelativeLayout
@@ -101,16 +102,17 @@
             android:layout_marginTop="-50dp"
             android:elevation="10dp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button1"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_round"
+                app:backgroundTint="@color/option"
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="@string/sign_up"/>
+                android:text="@string/sign_up"
+                app:cornerRadius="20dp"/>
         </RelativeLayout>
 
     </RelativeLayout>

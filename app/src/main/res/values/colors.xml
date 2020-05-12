@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorSplash">#353E4F</color>
+    <color name="option">#33FF33</color>
+    <color name="answer">#FF4019</color>
 
 
 </resources>
