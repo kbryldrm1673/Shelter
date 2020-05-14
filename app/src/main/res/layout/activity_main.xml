@@ -24,6 +24,22 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="40dp"
+        android:paddingBottom="40dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/quiz_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_round"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/image_button" />
+    </RelativeLayout>
+
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
