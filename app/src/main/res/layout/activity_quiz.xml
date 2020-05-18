@@ -58,14 +58,6 @@
                     android:backgroundTint="@color/option_background"
                     />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/option_c"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Option C"
-                    android:backgroundTint="@color/option_background"
-                    />
 
             </com.google.android.material.chip.ChipGroup>
 

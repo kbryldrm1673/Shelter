@@ -1,11 +1,11 @@
-package com.kubra.koubitirme.data
+package com.kubra.koubitirme.Database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.kubra.koubitirme.model.Question
+import com.kubra.koubitirme.Models.Question
 
 @Dao
 interface QuestionDAO {

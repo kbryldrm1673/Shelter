@@ -1,4 +1,4 @@
-package com.kubra.koubitirme.model
+package com.kubra.koubitirme.Models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -8,19 +8,15 @@ import androidx.room.PrimaryKey
 data class Question(
 
     @PrimaryKey(autoGenerate = true)
-    var qid: Int = 0,
+    var qid: Int ?=null,
 
-    var question: String,
+    var question: String?=null,
 
     @ColumnInfo(name = "option_a")
-    var optionA: String,
+    var optionA: String?=null,
 
     @ColumnInfo(name = "option_b")
-    var optionB: String,
+    var optionB: String?=null,
 
-    @ColumnInfo(name = "option_c")
-    var optionC: String,
-
-
-    var answer: String
+    var answer: String?=null
 )
