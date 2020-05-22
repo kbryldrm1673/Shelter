@@ -2,9 +2,9 @@ package com.kubra.koubitirme.add
 
 import android.content.Context
 import android.os.AsyncTask
-import com.kubra.koubitirme.Database.QuestionDAO
-import com.kubra.koubitirme.Database.QuestionDatabase
-import com.kubra.koubitirme.Models.Question
+import com.kubra.koubitirme.database.QuestionDAO
+import com.kubra.koubitirme.database.QuestionDatabase
+import com.kubra.koubitirme.models.Question
 
 class AddAnswerRepository(context: Context) {
     private val db:QuestionDatabase by lazy { QuestionDatabase.getInstance(context) }

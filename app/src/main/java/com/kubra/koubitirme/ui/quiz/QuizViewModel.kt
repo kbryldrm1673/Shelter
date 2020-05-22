@@ -3,7 +3,7 @@ package com.kubra.koubitirme.ui.quiz
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.kubra.koubitirme.Models.Question
+import com.kubra.koubitirme.models.Question
 
 class QuizViewModel(application: Application): AndroidViewModel(application) {
 

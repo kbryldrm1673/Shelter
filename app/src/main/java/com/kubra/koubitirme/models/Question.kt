@@ -1,4 +1,4 @@
-package com.kubra.koubitirme.Models
+package com.kubra.koubitirme.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

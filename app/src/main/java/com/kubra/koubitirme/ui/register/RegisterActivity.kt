@@ -1,4 +1,4 @@
-package com.kubra.koubitirme.ui
+package com.kubra.koubitirme.ui.register
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
-import com.kubra.koubitirme.Database.UserDAO
-import com.kubra.koubitirme.Database.UserDatabase
-import com.kubra.koubitirme.Models.User
 import com.kubra.koubitirme.R
+import com.kubra.koubitirme.database.UserDAO
+import com.kubra.koubitirme.database.UserDatabase
+import com.kubra.koubitirme.models.User
+import com.kubra.koubitirme.ui.MainActivity
 
 
 class RegisterActivity : AppCompatActivity() {

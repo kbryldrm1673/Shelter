@@ -1,14 +1,12 @@
-package com.kubra.koubitirme.Database
+package com.kubra.koubitirme.database
 
-import android.content.Context
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.kubra.koubitirme.Models.User
+import com.kubra.koubitirme.models.User
 
 @Database(entities = arrayOf(User::class),version = 1,exportSchema = false)
 abstract class UserDatabase:RoomDatabase() {
 
     abstract fun getUserDao(): UserDAO?
-
 
 }

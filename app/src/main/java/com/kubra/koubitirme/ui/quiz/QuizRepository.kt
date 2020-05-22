@@ -3,9 +3,9 @@ package com.kubra.koubitirme.ui.quiz
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import com.kubra.koubitirme.Database.QuestionDAO
-import com.kubra.koubitirme.Database.QuestionDatabase
-import com.kubra.koubitirme.Models.Question
+import com.kubra.koubitirme.database.QuestionDAO
+import com.kubra.koubitirme.database.QuestionDatabase
+import com.kubra.koubitirme.models.Question
 
 class  QuizRepository(context: Context) {
     private val db by lazy { QuestionDatabase.getInstance(context) }

@@ -9,10 +9,11 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
-import com.kubra.koubitirme.Database.UserDAO
-import com.kubra.koubitirme.Database.UserDatabase
 import com.kubra.koubitirme.R
+import com.kubra.koubitirme.database.UserDAO
+import com.kubra.koubitirme.database.UserDatabase
 import com.kubra.koubitirme.ui.quiz.QuizActivity
+import com.kubra.koubitirme.ui.register.RegisterActivity
 
 
 class MainActivity : AppCompatActivity(){
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
 
 
+//        var  mp : MainRepository?=null
+//        mp?.getAnimalImage();
 
         database = Room.databaseBuilder(
             applicationContext,

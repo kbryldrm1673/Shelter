@@ -1,4 +1,4 @@
-package com.kubra.koubitirme.Models
+package com.kubra.koubitirme.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -8,19 +8,19 @@ import androidx.room.PrimaryKey
 data class User(
 
     @PrimaryKey(autoGenerate = true)
-    var userid: Int ?=null,
+    val userid: Int ?=null,
 
     @ColumnInfo(name="user_name")
-    var name: String?=null,
+    val name: String?=null,
 
     @ColumnInfo(name="user_lastName")
-    var lastName: String?=null,
+    val lastName: String?=null,
 
     @ColumnInfo(name="user_email")
-    var email: String?=null,
+    val email: String?=null,
 
     @ColumnInfo(name="user_password")
-    var password: String?=null
+    val password: String?=null
 
 
 

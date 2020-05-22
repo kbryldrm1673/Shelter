@@ -1,14 +1,16 @@
 package com.kubra.koubitirme.ui.quiz
 
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.chip.Chip
 import com.kubra.koubitirme.R
-import com.kubra.koubitirme.Models.Question
+import com.kubra.koubitirme.design.main.ImageList
+import com.kubra.koubitirme.models.Question
 import kotlinx.android.synthetic.main.activity_quiz.*
 
 
@@ -40,6 +42,7 @@ class QuizActivity : AppCompatActivity() {
                         setViews()
                     }else{
                         Toast.makeText(this,"Welcome",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this@QuizActivity, ImageList::class.java))
                     }
                 }
             }
