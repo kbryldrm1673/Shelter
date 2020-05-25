@@ -4,65 +4,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
-    tools:context=".ui.MainActivity">
+    android:background="@color/AçıkGri"
+    tools:context=".ui.register.MainActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="40dp"
-        android:paddingRight="40dp">
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btSignUp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/button_round"
-            android:src="@drawable/image_button" />
-    </RelativeLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/singUpFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="44dp"
+            android:src="@drawable/register"
+            app:backgroundTint="@color/Fuşya"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="40dp"
-        android:paddingBottom="40dp">
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/quiz_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/button_round"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/image_button" />
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
     </RelativeLayout>
 
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+        android:id="@+id/cardview"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        android:layout_margin="40dp">
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="423dp"
+            android:layout_height="350dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:background="@color/AçıkGri"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/paw" />
+                app:srcCompat="@drawable/dog" />
 
             <EditText
 
@@ -71,12 +69,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:background="@drawable/text_round"
                 android:ems="10"
+                android:gravity="center"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/text_round"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:gravity="center"/>
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/passwordinput"
@@ -84,29 +82,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:background="@drawable/text_round"
                 android:ems="10"
+                android:gravity="center"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:background="@drawable/text_round"
-                android:gravity="center"
-                android:textColorHint="@color/colorPrimaryDark"
-                />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btSignIn"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:backgroundTint="@color/option"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:text="@string/login"
-                android:textColor="@color/colorPrimaryDark"
-                app:cornerRadius="20dp"
-                />
+                android:textColorHint="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
+
     </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btSignIn"
+        android:layout_width="253dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/cardview"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/colorPrimaryDark"
+        app:backgroundTint="@color/Fuşya"
+        app:cornerRadius="20dp" />
 
 </RelativeLayout>

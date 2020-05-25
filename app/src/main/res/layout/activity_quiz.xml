@@ -1,80 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:background="@color/AçıkGri">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="25dp"
-        >
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="120dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:background="@color/AçıkGri">
 
             <TextView
                 android:id="@+id/question"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="92dp"
                 android:gravity="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="25dp"
+                android:textSize="15dp"
+                android:textStyle="italic"
                 tools:text="Question" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/option_group"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="332dp"
+                android:layout_height="126dp"
                 android:layout_below="@id/question"
-                app:singleSelection="true"
-                app:chipSpacing="15dp"
                 android:layout_marginStart="25dp"
+                android:layout_marginTop="38dp"
                 android:layout_marginEnd="25dp"
-                >
+                android:layout_marginBottom="25dp"
+                app:chipSpacing="20dp"
+                app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/option_a"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
-                    android:text="Option A"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/option_background"
-                    />
+                    android:text="Option A" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/option_b"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Option B"
-                    android:backgroundTint="@color/option_background"
-                    />
+                    android:text="Option B" />
 
 
             </com.google.android.material.chip.ChipGroup>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/next_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="NEXT"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                app:cornerRadius="15dp"
-                app:backgroundTint="@color/option"/>
-
         </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nextFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="124dp"
+        android:src="@drawable/next"
+        app:backgroundTint="@color/Fuşya"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

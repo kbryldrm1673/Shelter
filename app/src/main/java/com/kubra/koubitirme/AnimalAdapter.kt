@@ -1,41 +1,45 @@
 package com.kubra.koubitirme
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.animal_detail_item.view.*
+import com.kubra.koubitirme.animalModel.Animal
 
-class AnimalAdapter(val animalList:ArrayList<Animal>):RecyclerView.Adapter<AnimalAdapter.ViewHolder>() {
+class AnimalAdapter(val context: Context) : RecyclerView.Adapter<AnimalAdapter.MyViewHolder>() {
 
+    var animalList : List<Animal> = listOf()
 
-    class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.animal_detail_item,parent,false)
-        return ViewHolder(view)
-
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.animal_image_item,parent,false)
+        return MyViewHolder(view)
     }
 
     override fun getItemCount(): Int {
         return animalList.size
     }
 
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        holder.itemView.textView1.text=animalList[position].name
+        holder.name.text = animalList[position].ismi
+        /*
+        Glide.with(context).load(animalList.get(position).resmi)
+            .apply(RequestOptions().centerCrop())
+            .into(holder.image)*/
     }
 
-    fun updateAnimalList( newAnimalList : ArrayList<Animal>){
-        animalList.clear()
-        newAnimalList.addAll(newAnimalList)
+    fun setMovieListItems(movieList: List<Animal>){
+        this.animalList = animalList;
         notifyDataSetChanged()
     }
 
+    class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
 
+        val name: TextView = itemView!!.findViewById(R.id.itemTextView)
+       // val image: ImageView = itemView!!.findViewById(R.id.image)
+
+    }
 }
-

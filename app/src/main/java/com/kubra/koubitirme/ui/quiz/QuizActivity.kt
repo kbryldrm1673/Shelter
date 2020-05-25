@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.chip.Chip
+import com.kubra.koubitirme.AnimalList
 import com.kubra.koubitirme.R
-import com.kubra.koubitirme.design.main.ImageList
 import com.kubra.koubitirme.models.Question
 import kotlinx.android.synthetic.main.activity_quiz.*
 
@@ -32,7 +32,7 @@ class QuizActivity : AppCompatActivity() {
                 questionList=it
                 setViews()
 
-                next_button.setOnClickListener {
+                nextFab.setOnClickListener {
                     val answer= findViewById<Chip>(option_group.checkedChipId)
                     option_group.clearCheck()
 
@@ -42,7 +42,7 @@ class QuizActivity : AppCompatActivity() {
                         setViews()
                     }else{
                         Toast.makeText(this,"Welcome",Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@QuizActivity, ImageList::class.java))
+                        startActivity(Intent(this@QuizActivity, AnimalList::class.java))
                     }
                 }
             }

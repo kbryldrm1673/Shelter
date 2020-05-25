@@ -1,4 +1,4 @@
-package com.kubra.koubitirme.ui
+package com.kubra.koubitirme.ui.register
 
 import android.annotation.SuppressLint
 import android.content.Intent

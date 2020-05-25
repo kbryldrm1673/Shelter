@@ -5,119 +5,107 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.register.RegisterActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/AçıkGri">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/registerLayout">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerLayout"
+        android:paddingTop="40dp"
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:id="@+id/cardView">
+            android:layout_margin="50dp"
+            android:id="@+id/cardView"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/AçıkGri">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Name"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
 
                 <EditText
-                    android:id="@+id/nameinput"
+                    android:id="@+id/rName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                   />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_margin="10dp"
-                    android:text="LastName"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:background="@drawable/text_round"
+                    android:drawableLeft="@drawable/person"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimaryDark" />
+
 
                 <EditText
-                    android:id="@+id/lastnameinput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/rLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
                     android:layout_margin="10dp"
-                    android:text="Email"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:background="@drawable/text_round"
+                    android:drawableLeft="@drawable/person"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimaryDark" />
+
 
                 <EditText
-                    android:id="@+id/emailinput"
+
+                    android:id="@+id/rEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_margin="10dp"
-                    android:text="Password"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:background="@drawable/text_round"
+                    android:drawableLeft="@drawable/email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/colorPrimaryDark" />
+
 
                 <EditText
-                    android:id="@+id/passwordinput"
+
+                    android:id="@+id/rPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    />
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/text_round"
+                    android:drawableLeft="@drawable/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/colorPrimaryDark" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerLayout"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="-50dp"
+        android:elevation="10dp"
+        android:id="@+id/registerLayout1"
+
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cardView"
-            android:layout_alignRight="@id/cardView"
-            android:layout_alignLeft="@id/cardView"
-            android:layout_marginRight="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="-50dp"
-            android:elevation="10dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/register"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:backgroundTint="@color/option"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="@string/sign_up"
-                app:cornerRadius="20dp"/>
-        </RelativeLayout>
-
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/sign_up"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/Fuşya"
+            />
     </RelativeLayout>
 
 </RelativeLayout>

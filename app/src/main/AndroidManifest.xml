@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
         android:name=".Application"
         android:allowBackup="true"
@@ -12,10 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".design.main.ImageList"/>
+        <activity android:name=".AnimalList" />
+        <activity android:name=".AnimalFood" />
         <activity android:name=".ui.quiz.QuizActivity" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".ui.register.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.register.MainActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.register.RegisterActivity"
