@@ -83,6 +83,7 @@ dependencies {
 
     // Okhttp
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
