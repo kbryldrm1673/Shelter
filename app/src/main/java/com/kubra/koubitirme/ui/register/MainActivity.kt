@@ -3,7 +3,6 @@ package com.kubra.koubitirme.ui.register
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +10,7 @@ import com.kubra.koubitirme.ApiService
 import com.kubra.koubitirme.R
 import com.kubra.koubitirme.RetrofitClient
 import com.kubra.koubitirme.animalModel.UserGET
+import com.kubra.koubitirme.ui.quiz.QuizActivity
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,7 +19,6 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity(){
 
-    private var btSignIn : Button?=null
     private var edtEmail:EditText?=null
     private var edtPassword:EditText?=null
 
@@ -28,10 +27,17 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
 
 
-        btSignIn = findViewById(R.id.btSignIn)
+
         edtEmail =findViewById(R.id.emailinput)
         edtPassword=findViewById(R.id.passwordinput)
 
+
+        val btSignIn: View = findViewById(R.id.btSignIn)
+
+        btSignIn.setOnClickListener {
+            val intent=Intent(this@MainActivity,QuizActivity::class.java)
+            startActivity(intent)
+        }
 
 
        fun signin(email: String, password: String){
