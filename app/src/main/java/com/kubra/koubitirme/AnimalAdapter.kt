@@ -1,20 +1,22 @@
 package com.kubra.koubitirme
 
-import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.kubra.koubitirme.animalModel.Animal
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.animal_list_detail.view.*
 
-class AnimalAdapter(val context: Context) : RecyclerView.Adapter<AnimalAdapter.MyViewHolder>() {
+class AnimalAdapter(private val animalList: List<Animal>) : RecyclerView.Adapter<AnimalAdapter.MyViewHolder>()  {
 
-    var animalList : List<Animal> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.animal_image_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.animal_list_detail,parent,false)
         return MyViewHolder(view)
     }
 
@@ -22,24 +24,34 @@ class AnimalAdapter(val context: Context) : RecyclerView.Adapter<AnimalAdapter.M
         return animalList.size
     }
 
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val animal = animalList[position]
 
-        holder.name.text = animalList[position].ismi
-        /*
-        Glide.with(context).load(animalList.get(position).resmi)
-            .apply(RequestOptions().centerCrop())
-            .into(holder.image)*/
+
+        Picasso.get().load(animal.resmi).into(holder.image)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(holder.itemView.context,"${animal.ismi}",Toast.LENGTH_LONG).show()
+
+
+            val intent= Intent(holder.itemView.context,AnimalDetail::class.java)
+            intent.putExtra("pass",animal.resmi)
+            intent.putExtra("adi",animal.ismi)
+            intent.putExtra("egitim",animal.egitimlimi)
+            intent.putExtra("uysal",animal.uysalmi)
+            intent.putExtra("cinsi",animal.cinsi)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
-    fun setMovieListItems(movieList: List<Animal>){
-        this.animalList = animalList;
-        notifyDataSetChanged()
+
+
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        var image :ImageView =itemView.animalImage
     }
 
-    class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
 
-        val name: TextView = itemView!!.findViewById(R.id.itemTextView)
-       // val image: ImageView = itemView!!.findViewById(R.id.image)
 
-    }
+
+
 }

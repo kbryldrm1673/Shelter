@@ -24,7 +24,15 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+
+            option_a.setOnClickListener {
+                Toast.makeText(this@QuizActivity, "A", Toast.LENGTH_LONG).show()
+
+            }
+
         viewModel = ViewModelProviders.of(this).get(QuizViewModel::class.java)
+
+
 
 
         viewModel?.allQuestions?.observe(this, Observer {
@@ -32,9 +40,11 @@ class QuizActivity : AppCompatActivity() {
                 questionList=it
                 setViews()
 
+
                 nextFab.setOnClickListener {
                     val answer= findViewById<Chip>(option_group.checkedChipId)
                     option_group.clearCheck()
+
 
                     qIndex++
 
@@ -49,6 +59,8 @@ class QuizActivity : AppCompatActivity() {
 
         })
 
+
+
     }
 
     private fun setViews(){
@@ -57,6 +69,8 @@ class QuizActivity : AppCompatActivity() {
         option_b.text=questionList[qIndex].optionB
 
     }
+
+
 
 }
 

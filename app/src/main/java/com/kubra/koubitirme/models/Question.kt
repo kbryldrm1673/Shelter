@@ -18,5 +18,5 @@ data class Question(
     @ColumnInfo(name = "option_b")
     var optionB: String?=null,
 
-    var answer: String?=null
+    var answer: String=""
 )

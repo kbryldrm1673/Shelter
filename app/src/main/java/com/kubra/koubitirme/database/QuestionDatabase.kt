@@ -45,42 +45,43 @@ abstract class QuestionDatabase:RoomDatabase() {
             private val dao: QuestionDAO? by lazy { db?.questionDao() }
 
             override fun doInBackground(vararg params: Void?): Void? {
+
                 val question =Question(
                     question = "Daha önce evcil hayvan beslediniz mi?",
                     optionA="Evet",
-                    optionB="Hayır",
-                    answer = ""
+                    optionB="Hayır"
+
+
                 )
                 dao?.addQuestion(question)
 
                 val question1=Question(
                     question = "Eviniz müstakil mi?",
                     optionA = "Evet",
-                    optionB ="Hayır",
-                    answer = ""
+                    optionB ="Hayır"
+
                 )
                 dao?.addQuestion(question1)
                 val question2 =Question(
                     question = "Engelli bir canlının bakımını üstlenmek ister misiniz?",
                     optionA="Evet",
-                    optionB = "Hayır",
-                    answer=""
+                    optionB = "Hayır"
                 )
                 dao?.addQuestion(question2)
+
                 val question3=Question(
                     question="Barınaktan hangi tür hayvan sahiplenmek istersiniz?",
                     optionA="Kedi",
-                    optionB="Köpek",
-                    answer = ""
+                    optionB="Köpek"
                 )
                 dao?.addQuestion(question3)
                 val question4=Question(
                     question="Evde bakımını üstlendiğiniz başka hayvan var mı?",
                     optionA="Evet",
-                    optionB="Hayır",
-                    answer=""
+                    optionB="Hayır"
                 )
                 dao?.addQuestion(question4)
+
 
                 return null
             }

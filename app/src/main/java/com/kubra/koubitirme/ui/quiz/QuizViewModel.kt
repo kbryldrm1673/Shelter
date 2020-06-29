@@ -11,4 +11,6 @@ class QuizViewModel(application: Application): AndroidViewModel(application) {
 
     val allQuestions: LiveData<List<Question>> by lazy { repository.getAllQuestions() }
 
+
+
 }

@@ -13,6 +13,9 @@ interface QuestionDAO {
     @Query("SELECT * FROM questions")
     fun getQuestions(): LiveData<List<Question>>
 
+    @Insert
+    fun insertAll(vararg questions: Question)
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addQuestion(question: Question)
 

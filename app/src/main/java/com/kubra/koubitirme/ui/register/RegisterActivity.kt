@@ -10,6 +10,7 @@ import com.kubra.koubitirme.ApiService
 import com.kubra.koubitirme.R
 import com.kubra.koubitirme.RetrofitClient
 import com.kubra.koubitirme.animalModel.UserPOST
+import kotlinx.android.synthetic.main.activity_register.*
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,9 +27,11 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-
         btRegister=findViewById(R.id.register)
-        Log.e("selim","selam")
+        register?.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

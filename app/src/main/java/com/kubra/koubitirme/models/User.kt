@@ -22,9 +22,6 @@ data class User(
     @ColumnInfo(name="user_password")
     val password: String?=null
 
-
-
-
 ) {
     constructor(name: String?,lastName: String?,email: String?,password: String?):this()
 }

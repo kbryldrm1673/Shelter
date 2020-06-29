@@ -12,6 +12,10 @@ android {
     publishNonDefault  true
     compileSdkVersion 28
     compileOptions.encoding = 'windows-1251'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
 
 
@@ -31,9 +35,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
+
+    dataBinding{
+        enabled=true
     }
+
 
 }
 
@@ -43,6 +49,7 @@ def glide_version = '4.11.0'
 def okhttp_version = '4.7.2'
 def room_version = "1.1.1"
 def support_version = "28.0.0"
+def picassoVersion = "2.71828"
 
 dependencies {
 
@@ -50,9 +57,6 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-
-
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
@@ -83,9 +87,9 @@ dependencies {
     // Stetho
     implementation "com.facebook.stetho:stetho:$stetho_version"
 
-    // Glide
-    implementation "com.github.bumptech.glide:glide:$glide_version"
-    kapt "com.github.bumptech.glide:compiler:$glide_version"
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+
 
     // Okhttp
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
@@ -94,8 +98,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
 
-   // releaseImplementation project(path: ':KOUBitirme', configuration: 'release')
-   // debugImplementation project(path: ':KOUBitirme', configuration: 'debug')
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation "androidx.test.ext:junit:1.1.1"

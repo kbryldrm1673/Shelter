@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Siyah">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="@color/AçıkGri"
+            android:textSize="45dp"
+            android:textStyle="bold"
+            android:clickable="true">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/popupTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Talebiniz Barınağa İletildi"
+            android:textColor="@android:color/white"
+            android:textSize="35dp"
+            android:textStyle="italic"
+            android:gravity="center_horizontal">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:background="@color/Fuşya"
+            android:text="EXIT" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:background="@color/Fuşya"
+            android:text="BACK" />
+
+    </LinearLayout>
+
+</LinearLayout>
